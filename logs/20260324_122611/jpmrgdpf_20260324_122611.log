@@ -1,0 +1,27 @@
+2026-03-24 12:26:11,733 - logger_setup - INFO - Logging initialized - Level: INFO
+2026-03-24 12:26:11,734 - logger_setup - INFO - Log file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\logs\20260324_122611\jpmrgdpf_20260324_122611.log
+2026-03-24 12:26:11,734 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,734 - __main__ - INFO - STEP 1: Loading input data
+2026-03-24 12:26:11,735 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,736 - data_loader - INFO - Found 1 input file(s) in D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Input
+2026-03-24 12:26:11,736 - data_loader - INFO - Loading file: Global Outlook Summary (15).xlsx
+2026-03-24 12:26:11,759 - data_loader - INFO - Available sheets: ['Global Outlook Summary', 'Sheet2']
+2026-03-24 12:26:11,760 - data_loader - INFO - Found exact match: "Global Outlook Summary"
+2026-03-24 12:26:11,769 - data_loader - INFO - Read 57 rows x 19 cols from sheet
+2026-03-24 12:26:11,769 - data_loader - INFO - Loaded "Global Outlook Summary" from Global Outlook Summary (15).xlsx (57 rows x 19 cols)
+2026-03-24 12:26:11,769 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,770 - __main__ - INFO - STEP 2: Parsing data
+2026-03-24 12:26:11,770 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,770 - parser - INFO - Parsing data from Global Outlook Summary (15).xlsx
+2026-03-24 12:26:11,770 - parser - INFO - Found section header "Real GDP % over year ago" at row 3, col 3
+2026-03-24 12:26:11,770 - parser - INFO - Detected 3 year columns: 2025, 2026, 2027
+2026-03-24 12:26:11,772 - parser - INFO - Found "Area" label at row 4, col 0
+2026-03-24 12:26:11,773 - parser - INFO - Data starts at row 6 (first entry: "United States")
+2026-03-24 12:26:11,774 - parser - INFO - Extracted data for 35 countries across 3 years
+2026-03-24 12:26:11,776 - parser - INFO - Built DataFrame: 3 rows x 36 cols
+2026-03-24 12:26:11,776 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,776 - __main__ - INFO - STEP 3: Comparing with master
+2026-03-24 12:26:11,776 - __main__ - INFO - ==================================================
+2026-03-24 12:26:11,776 - parser - INFO - Loading master data from D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-03-24 12:26:11,809 - parser - INFO - Loaded 3 rows from master data
+2026-03-24 12:26:11,830 - __main__ - INFO - No new data detected. Skipping file generation.

@@ -1,0 +1,50 @@
+2026-03-24 12:36:22,760 - logger_setup - INFO - Logging initialized - Level: INFO
+2026-03-24 12:36:22,760 - logger_setup - INFO - Log file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\logs\20260324_123622\jpmrgdpf_20260324_123622.log
+2026-03-24 12:36:22,760 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,760 - __main__ - INFO - STEP 1: Loading input data
+2026-03-24 12:36:22,760 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,761 - data_loader - INFO - Found 2 input file(s) in D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Input
+2026-03-24 12:36:22,761 - data_loader - INFO - Loading file: Global Outlook Summary (16).xlsx
+2026-03-24 12:36:22,794 - data_loader - INFO - Available sheets: ['Global Outlook Summary', 'Sheet2']
+2026-03-24 12:36:22,794 - data_loader - INFO - Found exact match: "Global Outlook Summary"
+2026-03-24 12:36:22,809 - data_loader - INFO - Read 57 rows x 19 cols from sheet
+2026-03-24 12:36:22,810 - data_loader - INFO - Loaded "Global Outlook Summary" from Global Outlook Summary (16).xlsx (57 rows x 19 cols)
+2026-03-24 12:36:22,810 - data_loader - INFO - Loading file: Global Outlook Summary (15).xlsx
+2026-03-24 12:36:22,829 - data_loader - INFO - Available sheets: ['Global Outlook Summary', 'Sheet2']
+2026-03-24 12:36:22,829 - data_loader - INFO - Found exact match: "Global Outlook Summary"
+2026-03-24 12:36:22,845 - data_loader - INFO - Read 57 rows x 19 cols from sheet
+2026-03-24 12:36:22,846 - data_loader - INFO - Loaded "Global Outlook Summary" from Global Outlook Summary (15).xlsx (57 rows x 19 cols)
+2026-03-24 12:36:22,846 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,846 - __main__ - INFO - STEP 2: Parsing data
+2026-03-24 12:36:22,846 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,846 - parser - INFO - Parsing data from Global Outlook Summary (16).xlsx
+2026-03-24 12:36:22,846 - parser - INFO - Found section header "Real GDP % over year ago" at row 3, col 3
+2026-03-24 12:36:22,847 - parser - INFO - Detected 4 year columns: 2025, 2026, 2027, 2028
+2026-03-24 12:36:22,847 - parser - INFO - Found "Area" label at row 4, col 0
+2026-03-24 12:36:22,847 - parser - INFO - Data starts at row 6 (first entry: "United States")
+2026-03-24 12:36:22,847 - parser - INFO - Extracted data for 35 countries across 4 years
+2026-03-24 12:36:22,850 - parser - INFO - Built DataFrame: 4 rows x 36 cols
+2026-03-24 12:36:22,850 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,851 - __main__ - INFO - STEP 3: Comparing with master
+2026-03-24 12:36:22,852 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,852 - parser - INFO - Loading master data from D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-03-24 12:36:22,870 - parser - INFO - Loaded 3 rows from master data
+2026-03-24 12:36:22,893 - __main__ - INFO - New years detected: [2028]
+2026-03-24 12:36:22,893 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,893 - __main__ - INFO - STEP 4: Generating output files
+2026-03-24 12:36:22,893 - __main__ - INFO - ==================================================
+2026-03-24 12:36:22,906 - parser - INFO - Merged data has 4 rows
+2026-03-24 12:36:22,906 - file_generator - INFO - Generating output files
+2026-03-24 12:36:22,908 - file_generator - INFO - Creating DATA file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260324_123622\JPMRGDPF_DATA_20260324_123622.xlsx
+2026-03-24 12:36:22,947 - file_generator - INFO - DATA file created: 4 rows, 35 columns
+2026-03-24 12:36:22,947 - file_generator - INFO - Creating META file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260324_123622\JPMRGDPF_META_20260324_123622.xlsx
+2026-03-24 12:36:22,980 - file_generator - INFO - META file created: 35 entries
+2026-03-24 12:36:22,980 - file_generator - INFO - Creating ZIP file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260324_123622\JPMRGDPF_20260324_123622.zip
+2026-03-24 12:36:23,014 - file_generator - INFO - ZIP file created
+2026-03-24 12:36:23,038 - file_generator - INFO - Copied files to latest folder
+2026-03-24 12:36:23,039 - file_generator - INFO - Saving master data to: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-03-24 12:36:23,039 - file_generator - INFO - Creating DATA file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-03-24 12:36:23,068 - file_generator - INFO - DATA file created: 4 rows, 35 columns
+2026-03-24 12:36:23,068 - file_generator - INFO - Master data saved: 4 rows
+2026-03-24 12:36:23,069 - file_generator - INFO - All output files generated successfully
+2026-03-24 12:36:23,070 - __main__ - INFO - Pipeline completed successfully

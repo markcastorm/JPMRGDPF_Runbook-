@@ -1,0 +1,70 @@
+i believe its a new dawn new begining its a new run book  howp you have gon through the previous code see how good it its and its architecture 
+((D:\Projects\SIMBA-RUNBOOKS\BOACTAR)
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\data_loader.py
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\file_generator.py
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\logger_setup.py
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\orchestrator.py
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\parser.py
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\README.md
+D:\Projects\SIMBA-RUNBOOKS\BOACTAR\requirements.txt
+
+) analyze the scripts weel we go na use the architecture  for this runbook we are gona have a master xls too like the boactor project 
+
+
+create the master file using this data (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx) never mind i have created it my self(D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx)
+lets discuss this  we ar gona have an input forlder where iwill be droping an xlsm file  or excell fiile csv name it it will have data like this file (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Input\Global Outlook Summary (15).xlsx) 
+has multiple tabs analyze it sometimes coan be one tab  we are interested in (Global Outlook Summary) i am extreamly interested in this 
+looks like this (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\image1.png)  analyze the data in that tab
+(D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\JPMRGDPF_Runbook.docx)  you can its straight forwad i gues the first step will be to 
+the parser will load the file  check the tabs check the one with the summary so when the we find the summary
+scan the entire tab data a try identifi the arrangememnt i dentify the rows and columns we needd  sence the wont be the same place everytime so we need the parser to be the brain and extreamly more inteligent and context aware and highly dynamic to identify what wee need so first ofr all w e need the area (Area
+) so pic the data cow we check for the (Real GDP % over year ago) ther years below it  like for this file we have 3 years but this might change infuture so learn to identify it for now we have (2025	2026	2027) so we pick the data below it corresponding to the areas we need  be extremly dynamic and analyze the arrangment before picking the data here is like what i have identified i need (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\image2.png)
+
+this will give you a glimpse of how i organize the data in my thoughts (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\My thoughts in realtime.xlsx)you can see (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\image3.png) how i have cleaned my data  and the results am getting 
+
+it is anual data but its run daily to keep an ey out for new data since it changes daily (Argentina
+
+● Australia
+● Brazil
+● Canada
+● Chile
+● China
+● Colombia
+● Czech Republic
+● Germany
+● Ecuador
+● Spain
+● Euro area
+● France
+● United Kingdom
+● Hong Kong
+● Hungary
+● Indonesia
+● India
+● Israel
+● Italy
+● Japan
+● South Korea
+● Malaysia
+● Mexico
+● New Zealand
+● Peru
+● Philippines
+● Poland
+● Russia
+● South Africa
+● Singapore
+● Taiwan
+● Thailand
+● Turkey
+● United States) theses are the countries i need based on the run book  giving us this finall result (D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\JPMRGDPF_DATA.xlsx)  you can see the mapping with subheaders in the data file is prettiy straight forword make it as dynamica as possible  so we map to the master check what we have if there is new change we add the new data points to the file the duplicate it ad the new output file  in the output folder with time stamped subfolders for every run and latest subfolder always holding the latest file in every run 
+we can save the mapping in a config .py 
+ so the script will be scanning the input folder  if it finds one loades it and processie  if there if new data generate the file data meta(D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Project_information\JPMRGDPF_META.xlsx) and zip  mention in the logs if there is new data and no new data  ok 
+
+
+
+
+
+
+
+
