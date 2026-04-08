@@ -1,0 +1,46 @@
+2026-04-02 09:09:41,870 - logger_setup - INFO - Logging initialized - Level: INFO
+2026-04-02 09:09:41,871 - logger_setup - INFO - Log file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\logs\20260402_090941\jpmrgdpf_20260402_090941.log
+2026-04-02 09:09:41,875 - __main__ - INFO - ==================================================
+2026-04-02 09:09:41,876 - __main__ - INFO - STEP 1: Loading input data
+2026-04-02 09:09:41,877 - __main__ - INFO - ==================================================
+2026-04-02 09:09:41,881 - data_loader - INFO - Found 1 input file(s) in D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Input
+2026-04-02 09:09:41,884 - data_loader - INFO - Loading file: Global Outlook Summary (23).xlsx
+2026-04-02 09:09:42,001 - data_loader - INFO - Available sheets: ['Global Outlook Summary']
+2026-04-02 09:09:42,046 - data_loader - INFO - Found exact match: "Global Outlook Summary"
+2026-04-02 09:09:42,181 - data_loader - INFO - Read 57 rows x None cols from sheet
+2026-04-02 09:09:42,184 - data_loader - INFO - Loaded "Global Outlook Summary" from Global Outlook Summary (23).xlsx (57 rows x 1 cols)
+2026-04-02 09:09:42,187 - __main__ - INFO - ==================================================
+2026-04-02 09:09:42,194 - __main__ - INFO - STEP 2: Parsing data
+2026-04-02 09:09:42,194 - __main__ - INFO - ==================================================
+2026-04-02 09:09:42,195 - parser - INFO - Parsing data from Global Outlook Summary (23).xlsx
+2026-04-02 09:09:42,258 - parser - INFO - Found section header "Real GDP % over year ago" at row 3, col 3
+2026-04-02 09:09:42,316 - parser - INFO - Detected 3 year columns: 2025, 2026, 2027
+2026-04-02 09:09:42,319 - parser - INFO - Found "Area" label at row 4, col 0
+2026-04-02 09:09:42,321 - parser - INFO - Data starts at row 6 (first entry: "United States")
+2026-04-02 09:09:42,331 - parser - INFO - Extracted data for 35 countries across 3 years
+2026-04-02 09:09:42,362 - parser - INFO - Built DataFrame: 3 rows x 36 cols
+2026-04-02 09:09:42,385 - __main__ - INFO - ==================================================
+2026-04-02 09:09:42,397 - __main__ - INFO - STEP 3: Comparing with master
+2026-04-02 09:09:42,398 - __main__ - INFO - ==================================================
+2026-04-02 09:09:42,400 - parser - INFO - Loading master data from D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-04-02 09:09:42,755 - parser - INFO - Loaded 3 rows from master data
+2026-04-02 09:09:42,989 - __main__ - INFO - Updated years: [2026]
+2026-04-02 09:09:43,466 - __main__ - INFO - ==================================================
+2026-04-02 09:09:43,485 - __main__ - INFO - STEP 4: Generating output files
+2026-04-02 09:09:43,487 - __main__ - INFO - ==================================================
+2026-04-02 09:09:43,488 - parser - INFO - Master rolling window: [2025, 2026, 2027]
+2026-04-02 09:09:43,530 - parser - INFO - Master will have 3 rows
+2026-04-02 09:09:43,530 - file_generator - INFO - Generating output files
+2026-04-02 09:09:43,539 - file_generator - INFO - Creating DATA file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260402_090941\JPMRGDPF_DATA_20260402_090941.xlsx
+2026-04-02 09:09:43,744 - file_generator - INFO - DATA file created: 3 rows, 35 columns
+2026-04-02 09:09:43,744 - file_generator - INFO - Creating META file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260402_090941\JPMRGDPF_META_20260402_090941.xlsx
+2026-04-02 09:09:43,878 - file_generator - INFO - META file created: 35 entries
+2026-04-02 09:09:43,879 - file_generator - INFO - Creating ZIP file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\output\20260402_090941\JPMRGDPF_20260402_090941.zip
+2026-04-02 09:09:44,010 - file_generator - INFO - ZIP file created
+2026-04-02 09:09:44,071 - file_generator - INFO - Copied files to latest folder
+2026-04-02 09:09:44,090 - file_generator - INFO - Saving master data to: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-04-02 09:09:44,091 - file_generator - INFO - Creating DATA file: D:\Projects\SIMBA-RUNBOOKS\JPMRGDPF_Runbook\Master Data\Master_JPMRGDPF_DATA.xlsx
+2026-04-02 09:09:44,191 - file_generator - INFO - DATA file created: 3 rows, 35 columns
+2026-04-02 09:09:44,196 - file_generator - INFO - Master data saved: 3 rows
+2026-04-02 09:09:44,197 - file_generator - INFO - All output files generated successfully
+2026-04-02 09:09:44,204 - __main__ - INFO - Pipeline completed successfully

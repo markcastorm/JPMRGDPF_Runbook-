@@ -139,16 +139,8 @@ def main():
             print(f"  Unchanged years: {[int(y) for y in changes['unchanged_years']]}")
 
         # =================================================================
-        # STEP 4: Generate Output (if changes found)
+        # STEP 4: Generate Output (always generate files)
         # =================================================================
-        if not changes['has_changes']:
-            print('\n  NO NEW DATA - nothing to generate.')
-            logger.info('No new data detected. Skipping file generation.')
-            print('\n' + '=' * 60)
-            print('COMPLETED - NO CHANGES DETECTED')
-            print('=' * 60)
-            return 0
-
         print('\nSTEP 4: Generating output files...')
         logger.info('=' * 50)
         logger.info('STEP 4: Generating output files')
@@ -181,6 +173,13 @@ def main():
         print(f"    ZIP:  {os.path.basename(result['zip_file'])}")
         print(f"\n  Output: {result['output_dir']}")
         print(f"  Master: {result['master_file']}")
+
+        if not changes['has_changes']:
+            print('\n  STATUS: NO NEW DATA')
+            logger.info('No new data detected. Files generated with existing data.')
+        else:
+            print('\n  STATUS: NEW DATA PROCESSED')
+
         print('\n' + '=' * 60)
         print('COMPLETED SUCCESSFULLY')
         print('=' * 60)
